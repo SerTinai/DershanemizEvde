@@ -1,0 +1,579 @@
+/* =========================================
+   GENEL
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #fff9ef;
+    color: #14464b;
+
+    font-family: "Anek Devanagari", Arial, sans-serif;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px !important;
+    height: 60px !important;
+
+    object-fit: cover !important;
+    border-radius: 50% !important;
+
+    display: block;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 55px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid rgba(20, 70, 75, 0.08);
+
+    box-shadow: 0 2px 12px rgba(20, 70, 75, 0.05);
+
+    position: relative;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #14464b;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+nav a:hover {
+    color: #14464b;
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: calc(100vh - 91px);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 70px 30px;
+
+    background-color: #fff9ef;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Dekoratif arka plan */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background-color: rgba(20, 70, 75, 0.035);
+
+    top: -180px;
+    left: -140px;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background-color: rgba(20, 70, 75, 0.03);
+
+    bottom: -170px;
+    right: -120px;
+}
+
+
+/* =========================================
+   HERO BAŞLIK
+   ========================================= */
+
+.hero h1 {
+    position: relative;
+    z-index: 1;
+
+    max-width: 1000px;
+
+    margin: 0 0 28px;
+
+    color: #14464b;
+
+    font-family: "Ojuju", Arial, sans-serif;
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    font-weight: 700;
+
+    line-height: 1.02;
+
+    letter-spacing: -2px;
+}
+
+
+/* =========================================
+   HERO AÇIKLAMA
+   ========================================= */
+
+.hero p {
+    position: relative;
+    z-index: 1;
+
+    max-width: 750px;
+
+    margin: 0 0 38px;
+
+    color: #14464b;
+
+    font-family: "Anek Devanagari", Arial, sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   HERO BUTON
+   ========================================= */
+
+.hero-button {
+    position: relative;
+    z-index: 1;
+
+    display: inline-block;
+
+    padding: 15px 32px;
+
+    background-color: #14464b;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.hero-button:hover {
+    background-color: #0e373b;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(20, 70, 75, 0.18);
+}
+
+
+/* =========================================
+   ÖZELLİKLER
+   ========================================= */
+
+.features {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 25px;
+
+    padding: 80px 50px;
+
+    background-color: #ffffff;
+}
+
+
+/* =========================================
+   ÖZELLİK KARTLARI
+   ========================================= */
+
+.feature-card {
+    position: relative;
+
+    width: 300px;
+
+    padding: 32px 28px;
+
+    background-color: #fff9ef;
+
+    border: 1px solid rgba(20, 70, 75, 0.08);
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(20, 70, 75, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 30px rgba(20, 70, 75, 0.11);
+}
+
+
+/* =========================================
+   KART BAŞLIKLARI
+   ========================================= */
+
+.feature-card h2 {
+    margin: 0 0 15px;
+
+    color: #14464b;
+
+    font-size: 21px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   KART METİNLERİ
+   ========================================= */
+
+.feature-card p {
+    margin: 0;
+
+    color: #315e62;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   COMING SOON MESAJI
+   ========================================= */
+
+.coming-soon {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 12px 15px;
+
+    background-color: #fff7ed;
+
+    border: 1px solid #fed7aa;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+    animation: showMessage 0.25s ease;
+}
+
+.warning-icon {
+    font-size: 24px;
+}
+
+.coming-soon strong {
+    display: block;
+
+    color: #9a3412;
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+.coming-soon p {
+    color: #7c2d12;
+
+    font-size: 12px;
+
+    margin: 0;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   ANİMASYON
+   ========================================= */
+
+@keyframes showMessage {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 15px 30px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero p {
+        font-size: 22px;
+    }
+
+    .features {
+        padding: 60px 25px;
+        gap: 18px;
+    }
+
+    .feature-card {
+        width: 30%;
+    }
+}
+
+
+/* =========================================
+   MOBİL
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 19px;
+
+        max-width: 500px;
+    }
+
+    .hero-button {
+        padding: 14px 27px;
+    }
+
+    .features {
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 50px 20px;
+    }
+
+    .feature-card {
+        width: 100%;
+
+        max-width: 380px;
+    }
+}
+
+
+/* =========================================
+   KÜÇÜK TELEFON
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 12px 15px;
+    }
+
+    .logo img {
+        width: 52px !important;
+        height: 52px !important;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 550px;
+
+        padding: 40px 18px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+
+        line-height: 1.08;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .hero-button {
+        font-size: 14px;
+
+        padding: 13px 24px;
+    }
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 50px;
+
+    background-color: #dbe8eb;
+
+    color: #14464b;
+
+    font-family: "Anek Devanagari", Arial, sans-serif;
+
+    font-size: 13px;
+
+    box-sizing: border-box;
+
+    border-top: 1px solid rgba(20, 70, 75, 0.08);
+}
+
+.footer-developer,
+.footer-copyright {
+    margin: 0;
+
+}
+
+
+/* =========================================
+   FOOTER MOBİL
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .site-footer {
+        padding: 16px 20px;
+
+        font-size: 12px;
+    }
+
+}

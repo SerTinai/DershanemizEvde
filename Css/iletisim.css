@@ -1,0 +1,320 @@
+/* =========================================
+   İLETİŞİM SAYFASI
+   ========================================= */
+
+.contact-page {
+    width: 100%;
+    min-height: calc(100vh - 91px);
+
+    background-color: #fff9ef;
+
+    color: #14464b;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.contact-page + * {
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #ffffff;
+}
+
+
+/* =========================================
+   ANA BÖLÜM
+   ========================================= */
+
+.contact-section {
+    width: 100%;
+    min-height: calc(100vh - 91px);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 80px 30px 60px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   ANA BAŞLIK
+   ========================================= */
+
+.contact-section h1 {
+    display: block;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    color: #14464b;
+
+    font-family: "Ojuju", Arial, sans-serif;
+
+    font-size: 48px;
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    letter-spacing: -1px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   KARTLAR
+   ========================================= */
+
+.contact-cards {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 25px;
+
+    margin-top: 72px;
+}
+
+
+/* =========================================
+   KART
+   ========================================= */
+
+.contact-card {
+    position: relative;
+
+    width: 300px;
+    min-height: 145px;
+
+    padding: 28px 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   ÜCRETSİZ SEVİYE ANALİZİ
+   ========================================= */
+
+.level-card {
+    background-color: #a8e6c0;
+}
+
+
+/* =========================================
+   WHATSAPP
+   ========================================= */
+
+.whatsapp-card {
+    background-color: #a8cff7;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HOVER
+   ========================================= */
+
+.contact-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(20, 70, 75, 0.10);
+}
+
+
+/* =========================================
+   NOKTALAR
+   ========================================= */
+
+.contact-card .contact-dot {
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    margin-bottom: 10px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+}
+
+
+/* YEŞİL */
+
+.level-dot {
+    background: linear-gradient(
+        135deg,
+        #73e6a1,
+        #3dbd72
+    );
+}
+
+
+/* MAVİ */
+
+.whatsapp-dot {
+    background: linear-gradient(
+        135deg,
+        #70a9ff,
+        #386cc9
+    );
+}
+
+
+/* =========================================
+   KART BAŞLIĞI
+   ========================================= */
+
+.contact-card h2 {
+    width: 100%;
+
+    margin: 0 0 6px;
+    padding: 0;
+
+    color: #14464b;
+
+    font-family: "Anek Devanagari", Arial, sans-serif;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   KART AÇIKLAMASI
+   ========================================= */
+
+.contact-card p {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    color: #315e62;
+
+    font-family: "Anek Devanagari", Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    .contact-section {
+        padding-top: 75px;
+    }
+
+    .contact-section h1 {
+        font-size: 42px;
+    }
+
+    .contact-cards {
+        margin-top: 60px;
+    }
+
+}
+
+
+/* =========================================
+   MOBİL
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .contact-section {
+        min-height: calc(100vh - 91px);
+
+        padding: 65px 20px 45px;
+    }
+
+    .contact-section h1 {
+        font-size: 34px;
+
+        line-height: 1.08;
+    }
+
+    .contact-cards {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 18px;
+
+        margin-top: 50px;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+}
+
+
+/* =========================================
+   KÜÇÜK TELEFON
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .contact-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .contact-section h1 {
+        font-size: 29px;
+    }
+
+}
